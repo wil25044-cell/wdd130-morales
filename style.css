@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+img {
+    width: 100%;
+    display: block;
+}
+h1, h2 {
+    font-family: "IM Fell French Canon SC", serif;
+}
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+header {
+    background: #c8102e;
+    color: white;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 170px;
+}
+nav {
+    display: flex;
+    gap: 35px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+nav a:hover {
+    color: gold;
+}
+.hero {
+    position: relative;
+    height: 650px;
+    background-image: url("../images/anfield.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+}
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 70%;
+}
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.hero-buttons a {
+    background: #c8102e;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+.hero-buttons a:hover {
+    background: #900020;
+}
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+
+    padding: 70px 60px;
+    align-items: center;
+}
+.intro-text h2 {
+    margin-bottom: 20px;
+}
+.intro-image img {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    padding: 0 60px 80px;
+}
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+.feature-box h2 {
+    color: #c8102e;
+    margin-bottom: 15px;
+}
+.feature-box ul {
+    list-style: none;
+}
+.feature-box li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+footer {
+    background: #111;
+    color: white;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.socials {
+    display: flex;
+    gap: 20px;
+}
+.socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: .3s;
+}
+.socials a:hover {
+    color: #c8102e;
+}
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero {
+        height: 500px;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .intro {
+        grid-template-columns: 1fr;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
